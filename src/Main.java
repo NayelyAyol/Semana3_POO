@@ -1,13 +1,14 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+
         System.out.println("semana3");
         System.out.println("Nayely del Rocio Ayol Guanluisa");
         Scanner sc = new Scanner(System.in);
         Cocinero[] cocineros = new Cocinero[3];
 
         System.out.println("\n-----INGRASE LA INFORMACION----");
-        for (int i = 0; i <=2; i++) {
+        for (int i = 0; i < cocineros.length; i++) {
             System.out.println("\nCocinero"+(i+1));
             System.out.println("\nNombre: ");
             String nombre = sc.nextLine();
@@ -20,8 +21,8 @@ public class Main {
         }
 
         System.out.println("\n------INFORMACION OBTENIDA------\n");
-        for (int i=0; i<=2; i++) {
-            cocineros[i].mostrarInfo();
+        for (Cocinero cocinero: cocineros) {
+            cocinero.mostrarInfo();
         }
     }
 }
